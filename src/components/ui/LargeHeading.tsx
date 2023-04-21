@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { VariantProps, cva } from 'class-variance-authority';
-import { cn } from '@/app/lib/util';
+import { cn } from '@/lib/util';
 
 export const headingVariant = cva(
   'text-black dark:text-white text-center lg:text-left font-extrabold leading-tight tracking-tigher',
@@ -39,4 +39,4 @@ const LargeHeading = React.forwardRef<HTMLHeadingElement, LargeHeadingProps>(
 
 LargeHeading.displayName = 'LargeHeading';
 
-export default Paragraph;
+export default LargeHeading;
