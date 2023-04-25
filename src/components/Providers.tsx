@@ -1,4 +1,5 @@
 'use client';
+
 import { ThemeProvider } from 'next-themes';
 import { SessionProvider } from 'next-auth/react';
 import { FC, ReactNode } from 'react';
