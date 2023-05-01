@@ -3,8 +3,15 @@
 import { FC, useState } from 'react';
 import Button from './ui/Button';
 import { signIn } from 'next-auth/react';
+import { Play } from 'next/font/google';
+import { toast } from '@/components/ui/toast';
 
 interface SignInButtonProps {}
+
+const play = Play({
+  subsets: ['latin'],
+  weight: '400',
+});
 
 const SignInButton: FC<SignInButtonProps> = ({}) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -22,7 +29,11 @@ const SignInButton: FC<SignInButtonProps> = ({}) => {
     }
   };
   return (
-    <Button onClick={signInGoogle} isLoading={isLoading}>
+    <Button
+      onClick={signInGoogle}
+      isLoading={isLoading}
+      className={`${play.className}`}
+    >
       SignIn
     </Button>
   );
